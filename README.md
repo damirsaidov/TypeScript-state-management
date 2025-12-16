@@ -113,7 +113,7 @@ GitHub: [https://github.com/damirsaidov/typeScript-Todo](https://github.com/dami
 
 ```bash
 # clone it
-git clone <repository-url>
+git clone https://github.com/damirsaidov/typeScript-Todo
 
 # install
 npm install
@@ -122,10 +122,8 @@ npm install
 ### Run
 
 ```bash
-# frontend
-npm start
 
-# backend (if separate)
+# to start
 npm run server
 ```
 
