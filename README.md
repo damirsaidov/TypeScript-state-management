@@ -139,6 +139,8 @@ src/
 ├── App.tsx
 ├── main.tsx
 db.json                # Fake API data
+```
+
 The setup is based on features, which helps it grow and makes it clear.
 
 🛠 Tech Stack
@@ -186,4 +188,3 @@ Decide on designs based on your needs
 MIT — free to use, change, and add to.
 
 Made to be straightforward. Created for comparison. Meant for real use.
-```
