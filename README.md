@@ -79,11 +79,15 @@ Each state solution can do the following with Todos:
 ## Quick startup:
 
 ```
-git clone https://github.com/damirsaidov/Typescript-state-managemant.git
+git clone https://github.com/damirsaidov/TypeScript-state-management.git
 ```
 
 ```
-cd Typescript-state-managemant
+cd TypeScript-state-management
+```
+
+```
+npx json-server --watch db.json
 ```
 
 ```
