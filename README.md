@@ -1,178 +1,185 @@
-## Todo Application (Sync &amp; Async)
+# State Management Playground – Sync &amp; Async Todos
 
-## About
-
-This repo has a Todo app that shows how to handle tasks in two ways: immediately and over time.
-
-Here's the breakdown:
-
-*   **Sync Todo**: Quick, local updates.
-*   **Async Todo**: Uses a backend with a **Swagger API**.
-*   **Dark Mode**: Uses **Context** for app-wide theme change.
-*   **Media**: The app handles images and other files.
-
-The project splits up the UI, data fetching, and global settings neatly.
+This is a front-end state management example that shows how popular React state solutions work in real situations. This repository is a hands-on way to compare state options. It combines normal and async Todo actions, media handling, and general interface settings like dark mode, all in a clean and easy-to-expand codebase.
 
 ---
 
-## Features
+## 🚀 What This Project Does
 
-*   Sync todo management (local)
-*   Async todo management (backend API)
-*   Swagger (OpenAPI) for API docs
-*   Dark mode (Context API)
-*   Media support
-*   Code is organized
+This repository isn't a simple tutorial project. It's a practical example to help developers check, compare, and think about state management methods in real conditions.
 
----
+### Core
 
-## Tech
-
-**Frontend**
-
-*   JavaScript / TypeScript
-*   React
-*   Context API (themes)
-*   Fetch / Axios (async calls)
-
-**Backend**
-
-*   REST API
-*   Swagger (OpenAPI) API docs
+- ✅ **Five State Management Solutions**
+- 🔁 **Sync &amp; Async Todo Implementations**
+- 🆔 **Todo Operations by ID**
+- 🌙 **Global Dark Mode via React Context**
+- 🖼️ **Media Support**
+- ⚡ **Fake REST API using `db.json`**
+- 🧩 **Feature-based setup**
+- ⚙️ **Made with Vite + TypeScript**
 
 ---
 
-## How it Works
+## 🧠 State Management Solutions Used
 
-### 1. Sync Todo
+Each choice does the same things in code, so you can easily compare them without differences.
 
-*   Todos stay on your side.
-*   Updates are right away.
-*   No backend needed.
-*   Good for understanding local state in React.
+### 1. Redux Toolkit
 
-### 2. Async Todo
+- Clear, scalable global state
+- Async actions using `createAsyncThunk`
+- Centralized store design
 
-*   Todos are saved on a backend.
-*   Operations happen in the background.
-*   API is documented with Swagger.
-*   Good for simulating real-world data.
+### 2. Zustand
 
----
+- Simple and fast
+- Uses hooks to get to the store
+- Normal and async actions without the need for extra code
 
-## Dark Mode
+### 3. Jotai
 
-Dark mode is set up with a Context provider:
+- State management that focuses on individual pieces
+- Very reactive
+- Clear separation
 
-*   App-wide theme setting
-*   Easy to switch themes
-*   Styles are consistent
+### 4. MobX
 
----
+- Uses observable to react
+- Little direct state setup needed
+- Automatically keeps track of what depends on what
 
-## Media
+### 5. React Context
 
-The app can handle media:
-
-*   Images
-*   Other static files
-*   Media in the UI
-
-Put media files in the right folder (like `public` or `assets`) and link to them.
+- Part of React
+- Used for **Dark Mode &amp; Media State**
+- Shows global UI state patterns
 
 ---
 
-## Swagger API
+## 📋 Todo Features (Sync &amp; Async)
 
-The backend has Swagger docs for all the async todo stuff.
+Each state solution can do the following with Todos:
 
-Typical features:
+### Synchronous Todos
 
-*   See all available endpoints
-*   Test requests in the browser
-*   See request and response formats
+- Make, change, delete
+- Mark as complete or incomplete
+- Find a todo **by ID**
 
-Start the backend to see the Swagger UI.
+### Asynchronous Todos
+
+- Full CRUD through REST API
+- Data saved in `db.json`
+- Pretend delays in the network
+- Handles errors and loading states
 
 ---
 
-## Repo
+## Quick startup:
 
-GitHub: [https://github.com/damirsaidov/typeScript-Todo](https://github.com/damirsaidov/typeScript-Todo)
-
----
-
-## Get Started
-
-### What you need
-
-*   Node.js
-*   npm or yarn
-
-### Setup
-
-```bash
-# clone it
-git clone https://github.com/damirsaidov/typeScript-Todo
-
-# install
-npm install
+```
+git clone https://github.com/damirsaidov/Typescript-state-managemant.git
 ```
 
-### Run
+```
+cd Typescript-state-managemant
+```
 
-```bash
-
-# to start
-npm run server
+```
+npm run dev
 ```
 
 ---
 
-## Code Structure
+## 🌐 Mock API
+
+All async actions use a fake REST API.
+
+- **Data Source:** `db.json`
+- **Tool:** Works with JSON Server
+- **Access:** `/todos`
+- **Access by ID:** `/todos/:id`
+
+This allows you to test async actions without needing other things.
+
+---
+
+## 🎨 UI &amp; Global State
+
+### Dark Mode
+
+- Done with **React Context**
+- Switch the theme on and off
+- Stays separate from the main code
+
+### Media Handling
+
+- Centralized media state
+- Shows how to handle global UI issues that aren't CRUD
+
+---
+
+## 🧱 Project Structure
 
 ```text
 src/
-</repository-url>├── components/
-│   └── switch.tsx
-├── pages/
-│   ├── async.tsx
-│   ├── asyncId.tsx
-│   ├── sync.tsx
-│   ├── syncId.tsx
-│   ├── layout.tsx
-│   └── notFound.tsx
+├── features/          # State code for each item
+│   ├── redux/
+│   ├── zustand/
+│   ├── jotai/
+│   ├── mobx/
+│   └── context/
+├── pages/             # UI views for each choice
+├── components/        # Shared UI parts
 ├── App.tsx
 ├── main.tsx
-├── App.css
-├── index.css
-├── vite-env.d.ts
+db.json                # Fake API data
+The setup is based on features, which helps it grow and makes it clear.
+
+🛠 Tech Stack
+
+React + TypeScript
+
+Vite
+
+Redux Toolkit
+
+Zustand
+
+Jotai
+
+MobX
+
+React Context API
+
+JSON Server (fake API)
+
+🎯 Who This Repo Is For
+
+Front-end engineers checking out state tools
+
+Developers swapping between state libraries
+
+Teams comparing design choices
+
+Students who want real examples
+
+📈 What You Get
+
+Instead of talking about state management in general, this repository lets you:
+
+Compare what it's like to code with
+
+See how much extra code is needed versus how flexible it is
+
+Learn about async methods across tools
+
+Decide on designs based on your needs
+
+📄 License
+
+MIT — free to use, change, and add to.
+
+Made to be straightforward. Created for comparison. Meant for real use.
 ```
-
-```text
-src/
-├── components/
-├── context/
-│   └── ThemeContext
-├── pages/
-├── services/
-│   └── api (async todo)
-├── assets/
-├── App.js
-└── index.js
-```
-
----
-
-## Next Steps
-
-*   User login for async todos
-*   Media uploads
-*   Better error messages
-*   Testing
-
----
-
-## License
-
-MIT License.

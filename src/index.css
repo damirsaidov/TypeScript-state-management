@@ -19,6 +19,12 @@ body {
     background-color: #090909;
     border: 1px solid #1677ff;
   }
+  .ant-table-container, .ant-table-cell{
+    background: black!important;
+    color: white!important;
+    border: 1px solid white!important;
+    border-collapse: collapse!important;
+  }
   .ant-btn-dangerous {
     background-color: black;
     color: #ff4d4f;
@@ -46,12 +52,11 @@ body {
     color: #948b8b;
   }
 }
-
 .cart {
   text-align: center !important;
   width: 360px !important;
-  height: fit-content !important;
-  padding: 15px !important;
+  height: 160px !important;
+  padding: 30px !important;
   box-shadow: 0 0 5px 0 !important;
   border-radius: 20px;
 }

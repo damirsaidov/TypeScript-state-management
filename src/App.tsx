@@ -23,9 +23,20 @@ const App = () => {
             }}
           >
             <Space>
-              <Link to='/'>Sync</Link>
-              <p className='hr'>|</p>
-              <Link to='/about'>Async</Link>
+              <Space>
+                <Link to='/'>Sync redux</Link>
+                <Link to='/about'>Async redux</Link>
+              </Space>
+              <hr style={{border:"1px solid #999", height:"20px", }}/>
+              <Space>
+                <Link to='/sync/Zustand'>Sync Zustand</Link>
+                <Link to='/async/Zustand'>Async Zustand</Link>
+              </Space>
+              <hr style={{border:"1px solid #999", height:"20px",}}/>
+              <Space>
+                <Link to='/sync/Jotai'>Sync Jotai</Link>
+                <Link to='/about'>Async redux</Link>
+              </Space>
             </Space>
             <Switch checked={darkmode} onChange={setDarkMode} />
           </div>
